@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: antiquewhite;
+}
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.evaluation-form {
+    margin-bottom: 20px;
+}
+.evaluation-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+.evaluation-form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.evaluation-form button {
+    padding: 10px 20px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.evaluation-form button:hover {
+    background-color: #0b7dda;
+}
+.recommendations {
+    margin-top: 20px;
+}
+.recommendations p {
+    color: #555;
+    background: #e7f3fe;
+    padding: 10px;
+    border-left: 5px solid #2196F3;
+}
+.chart-container {
+    margin-top: 20px;
+}

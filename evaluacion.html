@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación y Seguimiento</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/evaluacion.css">
+</head>
+<body>
+    <div>
+        <div class="navbar">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="index.html">PsicoCare</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                      <a class="nav-link" href="recursos.html">Recursos Educativos</a>
+                      <a class="nav-link" href="apoyo.html">Apoyo Comunitario</a>
+                      <a class="nav-link" href="evaluacion.html">Evaluacion</a>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Evaluación y Seguimiento</h2>
+        <div class="evaluation-form">
+            <label for="stressLevel">Nivel de Estrés (1-10):</label>
+            <input type="number" id="stressLevel" min="1" max="10">
+            <label for="anxietyLevel">Nivel de Ansiedad (1-10):</label>
+            <input type="number" id="anxietyLevel" min="1" max="10">
+            <label for="sleepQuality">Calidad del Sueño (1-10):</label>
+            <input type="number" id="sleepQuality" min="1" max="10">
+            <label for="physicalActivity">Nivel de Actividad Física (1-10):</label>
+            <input type="number" id="physicalActivity" min="1" max="10">
+            <button id="evaluateButton">Evaluar</button>
+        </div>
+        <div class="recommendations" id="recommendations">
+            <!-- Aquí se mostrarán las recomendaciones -->
+        </div>
+        <div class="chart-container">
+            <canvas id="evaluationChart"></canvas>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/evaluacion.js"></script>
+</body>
+</html>
+
