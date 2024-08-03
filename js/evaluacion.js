@@ -1,14 +1,14 @@
 document.getElementById('evaluateButton').addEventListener('click', evaluate);
 
         function evaluate() {
-            const stressLevel = document.getElementById('stressLevel').value;
-            const anxietyLevel = document.getElementById('anxietyLevel').value;
-            const sleepQuality = document.getElementById('sleepQuality').value;
-            const physicalActivity = document.getElementById('physicalActivity').value;
+            const stressLevel = parseInt(document.getElementById('stressLevel').value);
+            const anxietyLevel = parseInt(document.getElementById('anxietyLevel').value);
+            const sleepQuality = parseInt(document.getElementById('sleepQuality').value);
+            const physicalActivity = parseInt(document.getElementById('physicalActivity').value);
             const recommendationsDiv = document.getElementById('recommendations');
             recommendationsDiv.innerHTML = '';
 
-            if (stressLevel && anxietyLevel && sleepQuality && physicalActivity) {
+            if (isValidInput(stressLevel) && isValidInput(anxietyLevel) && isValidInput(sleepQuality) && isValidInput(physicalActivity)) {
                 let recommendations = '';
 
                 if (stressLevel > 7 || anxietyLevel > 7) {
@@ -63,6 +63,10 @@ document.getElementById('evaluateButton').addEventListener('click', evaluate);
                     }
                 });
             } else {
-                recommendationsDiv.innerHTML = '<p>Por favor, completa todos los campos para obtener recomendaciones.</p>';
+                recommendationsDiv.innerHTML = '<p>Por favor, ingresa valores entre 1 y 10 para todos los campos.</p>';
             }
+        }
+
+        function isValidInput(value) {
+            return value >= 1 && value <= 10;
         }
